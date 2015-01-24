@@ -1,0 +1,30 @@
+#!/bin/bash
+FD=~/.config/sublime-text-3/Packages/ASCII\ Decorator/pyfiglet/fonts/
+COLUMNS=$(tput cols)
+
+function bbig {
+  figlet -d "${FD}" -f doh -w ${COLUMNS} $1
+}
+
+function big {
+  figlet -w ${COLUMNS} $1
+}
+
+function show {
+  clear
+  head -n 1 $1 | bbig
+  tail -n +2 $1 | big
+}
+
+
+show title
+read x
+
+jp2a --width=$COLUMNS antti.jpg
+read x
+
+show slide1
+read x
+
+show slide2
+read x

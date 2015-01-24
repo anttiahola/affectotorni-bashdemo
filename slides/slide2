@@ -1,0 +1,4 @@
+Specs 4-6
+4) 2 simultaneous jobs, others wait
+5) No service breaks on update!
+6) More compute nodes can be added to FARM
